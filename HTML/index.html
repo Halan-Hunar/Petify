@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Halan Hunar, San Aram, Zheer Noori, Sahand Sarkawt">
 
-    <!--CSS logos-->>
+    <!--CSS logos-->
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-alt.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/crowdfire.css' rel='stylesheet'>
@@ -17,139 +17,103 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/heart.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
 
-    <!--Font-->>
+    <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <style>
-      body{
-        font-family: urbanist;
-        font-weight: 500;
-      }
-    </style>
+    <!--CSS Stylesheets-->
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/home.css">
 
   </head>
 
 
   <body>
-        <header class="petify-header">
-          
-          <div class="logo-container">
-            <a href="index.html" class="logo">
-              <img src="/images/logo.jpeg" alt="Petify Logo" style="width: 50px; border-radius: 5px;">
-            </a>
-          </div>
+    <header class="petify-header">
 
-          <div class="top-bar">
-            <div class="header-links">
-              <div>
-                <a href="#" class="help-faqs">Help & FAQs</a>
-              </div>
-              <div>
-                <a href="#" class="my-account">My Account</a>
-              </div>
-              
-              
-            </div>
-          </div>
-      
-          
-      
-          <!-- Desktop Menu -->
-          <nav class="desktop-menu">
-            <ul class="main-menu">
+      <div class="top-bar">
 
-              <li class="active-menu">
-                <div> <a href="index.html"><i class="gg-home-alt"></i>Home</a>
-                </div>
-              </li>
-      
-              <li>
-                <div>
-                   <a href="shop.html"><i class="gg-shopping-bag"></i>Shop</a>
-                </div>
-              </li>
-      
-              <li class="hot-features">
-                <div>
-                  <a href="features.html"><i class="gg-crowdfire"></i>Features</a>
-                </div>
-              </li>
-      
-              <li>
-                <div>
-                   <a href="about.html"><i class="gg-file-document"></i>About</a>
-                </div>
-              </li>
-      
-              <li>
-                <div>
-                  <a href="contact.html"><i class="gg-phone"></i>Contact</a>
-                </div>
-              </li>
-            </ul>
-            
-            <div class="top-right-options">
-              <ul>
-                <li>
-                  <div>
-                    <a href="#"><i class="gg-search"></i>Search</a>
-                  </div>
-                </li>
-
-                <li>
-                  <div>
-                     <a href="#"><i class="gg-heart"></i>Wish list</a>
-                  </div>
-                </li>
-
-                <li>
-                  <div>
-                    <a href="#"><i class="gg-shopping-cart"></i>Shopping Cart</a>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-          </nav>
-
-          <!-- Modal Search -->
-          <div class="modal-search">
-            <button class="close-modal-search">
-              <img src="images/icons/close-icon.png" alt="Close">
-            </button>
-        
-            <form class="search-form">
-              <input type="text" class="search-input" placeholder="Search...">
-              <button type="submit" class="search-button">
-                <img src="images/icons/search-icon.png" alt="Search">
-              </button>
-            </form>
-          </div>
-
-          <div class="slideshow">
-            <div class="image-slideshow">
-
-              <div class="img1-container"><img src="/images/image1.jpg" alt="Image 1" style="width: 450px;">
-              </div>
-
-              <div class="img2-container"><img src="/images/image2.jpg" alt="Image 2" style="width: 450px;">
-              </div>
-
-              <div class="img3-container"><img src="/images/image3.jpg" alt="Image 3" style="width: 450px;">
-              </div>
-            
-            
-          </div>
-          <div class="slideshow-buttons">
-            <button class="Adopt-now-button">Adopt Now</button>
-            <button class="Another-Action-button">Another Action</button>
-          </div>
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <img src="/images/logo.jpeg" alt="Petify Logo"class="logo-img">
+          </a>
         </div>
-        </header>
+
+        <div class="header-links">
+          <a href="#" class="help-faqs">Help & FAQs</a>
+          <a href="#" class="my-account">My Account</a>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="desktop-menu">
+        <ul class="main-menu">
+          <li class="active-menu">
+            <a href="index.html"><i class="gg-home-alt"></i>Home</a>
+          </li>
+          <li>
+            <a href="shop.html"><i class="gg-shopping-bag"></i>Shop</a>
+          </li>
+          <li class="hot-features">
+            <a href="features.html"><i class="gg-crowdfire"></i>Features</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="gg-file-document"></i>About</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="gg-phone"></i>Contact</a>
+          </li>
+        </ul>
+        <div class="top-right-options">
+          <ul>
+            <li>
+              <a href="#"><i class="gg-search"></i>Search</a>
+            </li>
+            <li>
+              <a href="#"><i class="gg-heart"></i>Wish list</a>
+            </li>
+            <li>
+              <a href="#"><i class="gg-shopping-cart"></i>Shopping Cart</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+        <!-- Modal Search -->
+        <div class="modal-search">
+          <button class="close-modal-search">
+            <img src="images/icons/close-icon.png" alt="Close">
+          </button>
       
-        
+          <form class="search-form">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button type="submit" class="search-button">
+              <img src="images/icons/search-icon.png" alt="Search">
+            </button>
+          </form>
+        </div>
+
+        <div class="slideshow">
+          <div class="image-slideshow">
+
+            <div class="img1-container"><img src="/images/image1.jpg" alt="Image 1" style="width: 450px;">
+            </div>
+
+            <div class="img2-container"><img src="/images/image2.jpg" alt="Image 2" style="width: 450px;">
+            </div>
+
+            <div class="img3-container"><img src="/images/image3.jpg" alt="Image 3" style="width: 450px;">
+            </div>
+          
+        </div>
+        <div class="slideshow-buttons">
+          <button class="Adopt-now-button">Adopt Now</button>
+          <button class="Another-Action-button">Another Action</button>
+        </div>
+      </div>
+
     <main>
     <section id="featured-pets">
       <h2>Featured Pets</h2>
