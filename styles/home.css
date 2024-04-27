@@ -121,3 +121,60 @@
   font-size: 30px;
   font-weight:700;
 }
+
+.item-image{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.pet-gallery {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  margin-bottom:100px ;
+}
+
+.pet-item {
+  flex: 0 0 calc(25% - 40px); /* Adjust item size */
+}
+
+.pet-name{
+  font-size: 24px;
+}
+
+.pet-details{
+  margin-bottom: 20px;
+}
+
+.about-container{
+  display: flex;
+  background-color: black;
+}
+
+.about-description,.about-details {
+  color: white;
+  font-size: 12px; 
+  padding: 20px; 
+  padding-bottom: 0;
+}
+
+.about-details{
+  width: 550px;
+  color: white;
+}
+
+#about-img{
+  width:550px;
+  height: 550px;
+  object-fit: cover;
+  padding-left: 50px;
+}
+
+.about-text{
+  padding-left: 20px;
+}
