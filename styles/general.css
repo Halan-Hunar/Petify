@@ -1,5 +1,10 @@
 body{
-  font-family: urbanist;
+  font-family: Poppins;
   font-weight: 500;
-  background-color: rgb(78, 169, 245);
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+h1,h2{
+  font-family: marcellus;
 }

@@ -1,62 +1,123 @@
-.petify-header{
-  display:flex;
+.petify-header {
+  display: flex;
   flex-direction: column;
 }
 
-.top-bar{
+.top-bar {
+  background-color: rgb(39, 39, 39);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Fix the element position */
+  top: 0; /* Stick it to the top of the page */
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 0;
 }
 
-.desktop-menu{
+.desktop-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0px 8px 0px;
+  background-color: rgb(254, 203, 121);
+  position: fixed; /* Fix the element position */
+  z-index: 999;
+  top: 30px; /* Adjust top position as needed */
+  width: 100%;
 }
 
-.logo-container{
-  margin-left: 20px;
+.logo-container {
   width: 30px;
 }
 
-.logo-img{
-  width: 60px;
-  height: 50px;
+.logo-container img {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 30px;
+  object-fit: cover;
 }
 
-.logo-container img{
-  border-radius: 5px;
-  margin-left: -28px;
-  margin-top: -28px;
-}
-
+/* Remove margin for all elements */
 .logo-container,
 .top-bar,
 .desktop-menu,
 .slideshow,
 .slideshow-buttons,
 .modal-search {
-  margin: 10px; 
+  margin: 0;
 }
 
 .desktop-menu ul {
-  list-style: none; 
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .desktop-menu ul li {
-  display: inline-block; 
-  margin-right: 10px; 
+  display: inline-block ;
+  margin-right: 24px;
+  font-size: 14px;
+  text-align: center;
 }
 
 .desktop-menu ul li:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
 
-.header-links{
-  font-size: 14px;
-  padding:0px;
-  margin-top: -80px;
+.header-links {
+  color: antiquewhite;
+  font-size: 12px;
+  padding: 0;
+  z-index: 999;
+}
+
+.slideshow-image {
+  width: 370px;
+}
+
+.slideshow {
+  margin-top: 42px;
+  margin-bottom: 60px;
+}
+
+.image-slideshow{
+  display: flex;
+}
+
+.img1-container,
+.img2-container,
+.img3-container{
+  flex: 1;
+}
+
+.banner-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  
+}
+
+.pet-categories-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center;
+}
+
+.category-box {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.categories {
+  font-family: marcellus;
+  margin-left: 60px;
+  font-size: 30px;
+  font-weight:700;
 }

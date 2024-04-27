@@ -10,7 +10,6 @@
     <!--CSS logos-->
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-alt.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/crowdfire.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/file-document.css' rel='stylesheet'>
@@ -20,7 +19,10 @@
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!--CSS Stylesheets-->
     <link rel="stylesheet" href="/styles/general.css">
@@ -49,33 +51,39 @@
       <!-- Desktop Menu -->
       <nav class="desktop-menu">
         <ul class="main-menu">
+
           <li class="active-menu">
             <a href="index.html"><i class="gg-home-alt"></i>Home</a>
           </li>
+
           <li>
-            <a href="shop.html"><i class="gg-shopping-bag"></i>Shop</a>
+            <a href="shop.html"><i class="at-android"></i>Pets</a>
           </li>
-          <li class="hot-features">
-            <a href="features.html"><i class="gg-crowdfire"></i>Features</a>
-          </li>
+          
           <li>
             <a href="about.html"><i class="gg-file-document"></i>About</a>
           </li>
+
           <li>
             <a href="contact.html"><i class="gg-phone"></i>Contact</a>
           </li>
+
         </ul>
+
         <div class="top-right-options">
           <ul>
             <li>
               <a href="#"><i class="gg-search"></i>Search</a>
             </li>
+
             <li>
               <a href="#"><i class="gg-heart"></i>Wish list</a>
             </li>
+
             <li>
               <a href="#"><i class="gg-shopping-cart"></i>Shopping Cart</a>
             </li>
+
           </ul>
         </div>
       </nav>
@@ -98,13 +106,13 @@
         <div class="slideshow">
           <div class="image-slideshow">
 
-            <div class="img1-container"><img src="/images/image1.jpg" alt="Image 1" style="width: 450px;">
+            <div class="img1-container"><img src="/images/image1.jpg" alt="Image 1" class="slideshow-image">
             </div>
 
-            <div class="img2-container"><img src="/images/image2.jpg" alt="Image 2" style="width: 450px;">
+            <div class="img2-container"><img src="/images/image2.jpg" alt="Image 2" class="slideshow-image">
             </div>
 
-            <div class="img3-container"><img src="/images/image3.jpg" alt="Image 3" style="width: 450px;">
+            <div class="img3-container"><img src="/images/image3.jpg" alt="Image 3" class="slideshow-image">
             </div>
           
         </div>
@@ -114,16 +122,45 @@
         </div>
       </div>
 
-    <main>
-    <section id="featured-pets">
-      <h2>Featured Pets</h2>
-    </section>
+      <div class="categories">
+        <p>
+          Categories
+        </p>
+      </div>
 
-    <section id="recent-adoptions">
-      <h2>Recent Adoptions</h2>
-    </section>
-    </main>
-
+      <div class="pet-categories-container">
+        
+        <div class="category-box cat-box">
+          <img src="/images/cat.jpg" alt="Cat Banner" class="banner-image">
+          <a href="cat-products.html" class="category-link">
+            <div class="category-info">
+              <h2>Cats</h2>
+              <p>Explore our collection of adorable cats!</p>
+            </div>
+          </a>
+        </div>
+      
+        <div class="category-box dog-box">
+          <img src="/images/dog.jpg" alt="Dog Banner" class="banner-image">
+          <a href="dog-products.html" class="category-link">
+            <div class="category-info">
+              <h2>Dogs</h2>
+              <p>Discover our lovable dogs looking for a home!</p>
+            </div>
+          </a>
+        </div>
+      
+        <div class="category-box bird-box">
+          <img src="/images/bird.jpg" alt="Bird Banner" class="banner-image">
+          <a href="bird-products.html" class="category-link">
+            <div class="category-info">
+              <h2>Birds</h2>
+              <p>Find your feathered friend among our beautiful birds!</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
 
     <footer>
       <p>&copy; 2024 Petify. All rights reserved.</p>
