@@ -15,18 +15,6 @@
   padding-bottom: 0;
 }
 
-.desktop-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px 8px 0px;
-  background-color: rgb(254, 203, 121);
-  position: fixed; /* Fix the element position */
-  z-index: 999;
-  top: 30px; /* Adjust top position as needed */
-  width: 100%;
-}
-
 .logo-container {
   width: 30px;
 }
@@ -49,22 +37,6 @@
   margin: 0;
 }
 
-.desktop-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.desktop-menu ul li {
-  display: inline-block ;
-  margin-right: 24px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.desktop-menu ul li:last-child {
-  margin-right: 0;
-}
 
 .header-links {
   color: antiquewhite;
@@ -178,3 +150,50 @@
 .about-text{
   padding-left: 20px;
 }
+
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: rgb(255, 209, 135);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  overflow: hidden;
+  position: -webkit-sticky;
+  top: 30px;
+}
+
+/* Style the navigation bar links */
+.desktop-menu a {
+  color: black;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.link-container{
+  width: 100%;
+}
+
+
+/* Right-aligned link */
+.desktop-menu a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.link-container:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.desktop-menu a.active {
+  background-color: #ffeb91;
+  color: white;
+}
+
