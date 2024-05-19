@@ -1,0 +1,49 @@
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.pet-pic {
+    margin-top: 100px;
+    width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.Search-bar{
+    margin-left: 12px;
+    font-size: 20px;
+    border-radius: 8px;
+    border-style: solid;
+    display: block;
+}
+
+.pet-preview{
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    
+}
+
+
+.pet-info {
+    display:inline-block;
+    width: 200px;
+}
+
+
+
+.pet-title {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 550;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.pet-row{
+    margin-bottom: 12px;
+}
+
