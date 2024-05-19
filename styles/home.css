@@ -4,7 +4,7 @@
 }
 
 .top-bar {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(18, 18, 18);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +13,7 @@
   width: 100%;
   margin-bottom: 10px;
   padding-bottom: 0;
+  z-index: 999;
 }
 
 .logo-container {
@@ -37,6 +38,44 @@
   margin: 0;
 }
 
+.Adopt-now-button,
+.Another-Action-button{
+  padding: 10px 20px;
+  font-family: poppins;
+  font-weight: 500;
+  border-radius: 30px;
+  border: solid 1px black;
+  background-color: orange;
+  cursor: pointer;
+  font-size: 18px;
+  transition: font-weight 0.2s, background-color 0.2s, font-size 0.2s;
+}
+
+.Another-Action-button{
+  background-color: black;
+  color: white;
+}
+
+.Adopt-now-button:hover
+{
+  background-color: white;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.Another-Action-button:hover{
+  background-color: white;
+  font-weight: 700;
+  font-size: 19px;
+  color: black;
+}
+
+.Adopt-now-button:active,
+.Another-Action-button:active{
+  color: orange;
+  font-weight: 600;
+}
+
 
 .header-links {
   color: antiquewhite;
@@ -46,12 +85,12 @@
 }
 
 .slideshow-image {
-  width: 370px;
+  width: 400px;
 }
 
 .slideshow {
-  margin-top: 42px;
-  margin-bottom: 60px;
+  margin-top: 88px;
+  margin-bottom: 200px;
 }
 
 .image-slideshow{
@@ -65,44 +104,82 @@
 }
 
 .banner-image {
-  width: 200px;
-  height: 200px;
+  width: 280px;
+  height: 280px;
   border-radius: 8px;
   object-fit: cover;
-  
+}
+
+.categories-container {
+  background-color: orange;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .pet-categories-container {
   display: flex;
-  flex: 1;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
+  justify-content: space-between;
   align-items: center;
+  gap: 8px;
 }
 
 .category-box {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.category-box:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  background-color: rgb(255, 243, 156); 
 }
 
 .categories {
-  font-family: marcellus;
-  margin-left: 60px;
+  font-family: Marcellus, serif;
   font-size: 30px;
-  font-weight:700;
+  font-weight: 700;
+  text-align: center; 
+  margin-bottom: 20px;
 }
 
-.item-image{
+.category-link {
+  color: black;
+  font-size: 16px; 
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.category-link:hover {
+  color: orangered;
+}
+
+.item-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 50%; 
+  margin-bottom: 15px; 
+  transition: transform 0.3s;
+}
+
+.item-image:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
 }
 
 .pet-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
   text-align: left;
   padding: 10px;
@@ -156,7 +233,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  background-color: rgb(255, 209, 135);
+  background-color: orange;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -168,9 +245,7 @@
 /* Style the navigation bar links */
 .desktop-menu a {
   color: black;
-  float: left;
   display: block;
-  text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
@@ -179,7 +254,6 @@
   width: 100%;
 }
 
-
 /* Right-aligned link */
 .desktop-menu a.right {
   float: right;
@@ -187,8 +261,12 @@
 
 /* Change color on hover */
 .link-container:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: orangered;
+  color: white;
+}
+
+.link-container:active{
+  background-color: white;
 }
 
 /* Active/current link */
@@ -197,3 +275,170 @@
   color: white;
 }
 
+
+/* Filter Section Styles */
+.filter-section {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  border: solid 1px #ccc;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  background-color: #e0e0e0;
+  font-weight: 700;
+}
+
+.filter-button.active {
+  background-color: orange;
+  color: white;
+  font-weight: 700;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-option {
+  flex: 1;
+  min-width: 150px;
+}
+
+.toggle-filter,
+.toggle-search {
+  padding: 10px 20px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  border: solid 1px #ccc;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ;
+}
+
+.toggle-filter:hover,
+.toggle-search:hover {
+  background-color: #e0e0e0;
+  font-weight: 700;
+}
+
+.search-panel {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  font-family: Poppins;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: Poppins;
+  transition: background-color 0.2s ;
+}
+
+.search-button:hover {
+  background-color: orangered;
+}
+
+.filter-panel {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sort-by,
+.age-range,
+color-filter,
+size-filter {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sort-by h4,
+.age-range h4,
+.color-filter h4,
+.size-filter h4 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sort-by ul,
+.age-range ul,
+.color-filter ul,
+.size-filter ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sort-by ul li,
+.age-range ul li,
+.color-filter ul li,
+.size-filter ul li {
+  margin-bottom: 5px;
+}
+
+.filter-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 20px;
+  transition: background-color 0.2s , color 0.2s;
+}
+
+.filter-link.active {
+  background-color: orange;
+  color: white;
+}
+
+.filter-link:hover {
+  background-color: #e0e0e0;
+}
