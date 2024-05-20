@@ -7,15 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Halan Hunar, San Aram, Zheer Noori, Sahand Sarkawt">
 
-    <!--CSS logos-->
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-alt.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/file-document.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/heart.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
-
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +29,7 @@
 
         <div class="logo-container">
           <a href="index.html" class="logo">
-            <img src="/images/logo.jpeg" alt="Petify Logo"class="logo-img">
+            <img src="/images/logo.png" alt="Petify Logo"class="logo-img">
           </a>
         </div>
 
@@ -51,50 +42,36 @@
       <!-- Desktop Menu -->
       <nav class="desktop-menu">
           <div class="link-container">
-            <a href="index.html"><i class="gg-home-alt"></i>Home</a>
+            <a href="index.html">Home</a>
           </div>
 
           <div class="link-container">
-            <a href="Adopt.html"><i class="at-android"></i>Pets</a>
+            <a href="Adopt.html">Pets</a>
           </div>
 
           <div class="link-container">
-            <a href="#about"><i class="gg-file-document"></i>About</a>
+            <a href="#about">About</a>
           </div>
 
           <div class="link-container">
-            <a href="contact.html"><i class="gg-phone"></i>Contact</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="link-container">
-            <a href="#"><i class="gg-search"></i>Search</a>
+            <a href="#searching-box">Search</a>
           </div>
 
           <div class="link-container">
-            <a href="#"><i class="gg-heart"></i>Wish list</a>
+            <a href="#">Wishlist</a>
           </div>
             
           <div class="link-container">
-            <a href="#"><i class="gg-shopping-cart"></i>Shopping Cart</a>
+            <a href="#">shopping Cart</a>
           </div>
        
             
       </nav>
     </header>
-    
-        <!-- Modal Search -->
-        <div class="modal-search">
-          <button class="close-modal-search">
-            <img src="images/icons/close-icon.png" alt="Close">
-          </button>
-      
-          <form class="search-form">
-            <input type="text" class="search-input" placeholder="Search...">
-            <button type="submit" class="search-button">
-              <img src="images/icons/search-icon.png" alt="Search">
-            </button>
-          </form>
-        </div>
 
         <div class="slideshow">
           <div class="image-slideshow">
@@ -115,42 +92,44 @@
         </div>
       </div>
 
-      <div class="categories">
-        <p>
-          Categories
-        </p>
-      </div>
-
-      <div class="pet-categories-container">
+      <div class="categories-container">
+        <div class="categories">
+          <p style="color: white;">
+            Categories
+          </p>
+        </div>
+  
+        <div class="pet-categories-container">
+          
+          <div class="category-box cat-box">
+            <img src="/images/cat.jpg" alt="Cat Banner" class="banner-image">
+            <a href="cat-products.html" class="category-link">
+              <div class="category-info">
+                <h2>Cats</h2>
+                <p>Explore our collection of adorable cats!</p>
+              </div>
+            </a>
+          </div>
         
-        <div class="category-box cat-box">
-          <img src="/images/cat.jpg" alt="Cat Banner" class="banner-image">
-          <a href="cat-products.html" class="category-link">
-            <div class="category-info">
-              <h2>Cats</h2>
-              <p>Explore our collection of adorable cats!</p>
-            </div>
-          </a>
-        </div>
-      
-        <div class="category-box dog-box">
-          <img src="/images/dog.jpg" alt="Dog Banner" class="banner-image">
-          <a href="dog-products.html" class="category-link">
-            <div class="category-info">
-              <h2>Dogs</h2>
-              <p>Discover our lovable dogs looking for a home!</p>
-            </div>
-          </a>
-        </div>
-      
-        <div class="category-box bird-box">
-          <img src="/images/bird.jpg" alt="Bird Banner" class="banner-image">
-          <a href="bird-products.html" class="category-link">
-            <div class="category-info">
-              <h2>Birds</h2>
-              <p>Find your feathered friend among our beautiful birds!</p>
-            </div>
-          </a>
+          <div class="category-box dog-box">
+            <img src="/images/dog.jpg" alt="Dog Banner" class="banner-image">
+            <a href="dog-products.html" class="category-link">
+              <div class="category-info">
+                <h2>Dogs</h2>
+                <p>Discover our lovable dogs looking for a home!</p>
+              </div>
+            </a>
+          </div>
+        
+          <div class="category-box bird-box">
+            <img src="/images/bird.jpg" alt="Bird Banner" class="banner-image">
+            <a href="bird-products.html" class="category-link">
+              <div class="category-info">
+                <h2>Birds</h2>
+                <p>Find your feathered friend among our beautiful birds!</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -200,12 +179,12 @@
             </div>
       
             <div class="search-panel">
-              <div class="search-box">
-                <input type="text" class="search-input" placeholder="Search...">
-                <button class="search-button">
-                  <i class="fas fa-search"></i>
+              <form class="search-box" action="search-results.html" method="GET">
+                <input type="text" class="search-input" placeholder="Search..." id="searching-box" name="query">
+                <button type="submit" class="search-button">
+                  <img src="/images/search-icon.png" alt="search" style="width: 20px;">
                 </button>
-              </div>
+              </form>
             </div>
       
             <div class="filter-panel">
