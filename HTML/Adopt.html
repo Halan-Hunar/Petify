@@ -1,96 +1,319 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <title>
-            Adoption
-        </title>
+<html lang="en">
 
-       <link rel="stylesheet" href="/styles/adopt-style.css">
-       <link rel="stylesheet" href="/styles/general.css">
-       <link rel="stylesheet" href="/styles/home.css">
-       
-       <header class="petify-header">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petify.com - Adopt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/adopt-style.css">
+</head>
 
+<body>
+    <header class="petify-header">
         <div class="top-bar">
-  
-          <div class="logo-container">
-            <a href="index.html" class="logo">
-              <img src="/images/logo.jpeg" alt="Petify Logo"class="logo-img">
-            </a>
-          </div>
-  
-          <div class="header-links">
-            <a href="#" class="help-faqs">Help & FAQs</a>
-            <a href="#" class="my-account">My Account</a>
-          </div>
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="/images/logo.png" alt="Petify Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="header-links">
+                <a href="#" class="help-faqs">Help & FAQs</a>
+                <a href="#" class="my-account">My Account</a>
+            </div>
         </div>
-  
-        <!-- Desktop Menu -->
         <nav class="desktop-menu">
             <div class="link-container">
-              <a href="index.html"><i class="gg-home-alt"></i>Home</a>
+                <a href="index.html">Home</a>
             </div>
-  
             <div class="link-container">
-              <a href="Adopt.html"><i class="at-android"></i>Pets</a>
+                <a href="adopt.html">Pets</a>
             </div>
-  
             <div class="link-container">
-              <a href="#about"><i class="gg-file-document"></i>About</a>
+                <a href="#about">About</a>
             </div>
-  
             <div class="link-container">
-              <a href="contact.html"><i class="gg-phone"></i>Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
-  
             <div class="link-container">
-              <a href="#"><i class="gg-search"></i>Search</a>
+                <a href="#searching-box">Search</a>
             </div>
-  
             <div class="link-container">
-              <a href="#"><i class="gg-heart"></i>Wish list</a>
+                <a href="#">Wishlist</a>
             </div>
-              
             <div class="link-container">
-              <a href="#"><i class="gg-shopping-cart"></i>Shopping Cart</a>
+                <a href="#">Shopping Cart</a>
             </div>
         </nav>
-      </header>
+    </header>
 
-        <div class="pet-preview">
+    <main>
+        <section class="adoption-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title">Pets Available for Adoption</h2>
+                </div>
 
-        <div class="pet-row">
-            <img src ="/images/cat-1.jpg" class ="pet-pic">
-        </div>
-        <div class="pet-details">
-            <h4 class="pet-name">Wawa</h4>
-            <span class="pet-age">1 year old</span>
-          </div>
-      </div>
+                <div class="filter-section">
+                    <div class="filter-buttons">
+                        <button class="filter-button active" data-filter="*">All Pets</button>
+                        <button class="filter-button" data-filter=".dogs">Dogs</button>
+                        <button class="filter-button" data-filter=".cats">Cats</button>
+                        <button class="filter-button" data-filter=".birds">Birds</button>
+                        <button class="filter-button" data-filter=".rabbits">Rabbits</button>
+                    </div>
 
-        <div class="pet-preview">
+                    <div class="search-panel">
+                        <form class="search-box" action="search-results.html" method="GET">
+                            <input type="text" class="search-input" placeholder="Search..." id="searching-box" name="query">
+                            <button type="submit" class="search-button">
+                                <img src="/images/search-icon.png" alt="search" style="width: 20px;">
+                            </button>
+                        </form>
+                    </div>
 
-            <div class="pet-info">
-                <img src ="/images/cat-2.jpg" class ="pet-pic">
+                    <div class="filter-panel">
+                        <div class="sort-by">
+                            <h4>Sort By</h4>
+                            <ul>
+                                <li><a href="#" class="filter-link active">Default</a></li>
+                                <li><a href="#" class="filter-link">Newest</a></li>
+                                <li><a href="#" class="filter-link">Oldest</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="age-range">
+                            <h4>Age</h4>
+                            <ul>
+                                <li><a href="#" class="filter-link active">All Ages</a></li>
+                                <li><a href="#" class="filter-link">0-1 year</a></li>
+                                <li><a href="#" class="filter-link">1-3 years</a></li>
+                                <li><a href="#" class="filter-link">3-5 years</a></li>
+                                <li><a href="#" class="filter-link">5+ years</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="color-filter">
+                            <h4>Color</h4>
+                            <ul>
+                                <li><a href="#" class="filter-link active">All Colors</a></li>
+                                <li><a href="#" class="filter-link">Black</a></li>
+                                <li><a href="#" class="filter-link">White</a></li>
+                                <li><a href="#" class="filter-link">Brown</a></li>
+                                <li><a href="#" class="filter-link">Gray</a></li>
+                                <li><a href="#" class="filter-link">Mixed</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="size-filter">
+                            <h4>Size</h4>
+                            <ul>
+                                <li><a href="#" class="filter-link active">All Sizes</a></li>
+                                <li><a href="#" class="filter-link">Small</a></li>
+                                <li><a href="#" class="filter-link">Medium</a></li>
+                                <li><a href="#" class="filter-link">Large</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="pet-type">Our Dogs:</h2>
+
+                <div class="pet-gallery">
+                    <div class="pet-item dogs">
+                        <div class="pet-thumbnail">
+                            <img src="/images/dog-1.jpg" alt="Dog 1">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Buddy</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Golden Retriever</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item dogs">
+                        <div class="pet-thumbnail">
+                            <img src="/images/dog-2.jpg" alt="Dog 2">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Shepard</h3>
+                            <p>Age: 4 years</p>
+                            <p>Breed: Bulldog</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item dogs">
+                        <div class="pet-thumbnail">
+                            <img src="/images/dog-3.jpg" alt="Dog 3">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Ellie</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Pug</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item dogs">
+                        <div class="pet-thumbnail">
+                            <img src="/images/dog-4.jpg" alt="Dog 4">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Candy</h3>
+                            <p>Age: 6 years</p>
+                            <p>Breed: American Eskimo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="pet-type">Our Cats:</h2>
+                <div class="pet-gallery">
+                    <div class="pet-item cats">
+                        <div class="pet-thumbnail">
+                            <img src="/images/cat-1.jpg" alt="Cat 1">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Wawa</h3>
+                            <p>Age: 1 year</p>
+                            <p>Breed: Siamese</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item cats">
+                        <div class="pet-thumbnail">
+                            <img src="/images/cat-2.jpg" alt="Cat 2">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Wuwa</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Persian</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item cats">
+                        <div class="pet-thumbnail">
+                            <img src="/images/cat-3.jpg" alt="Cat 3">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Tom</h3>
+                            <p>Age: 10 years</p>
+                            <p>Breed: Ocicat</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item cats">
+                        <div class="pet-thumbnail">
+                            <img src="/images/cat-4.jpg" alt="Cat 4">
+                        </div>
+                        <div class="pet-details">
+                            <h3>caddy</h3>
+                            <p>Age: 5 years</p>
+                            <p>Breed: Exotic ShortHair</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="pet-type">Our Birds:</h2>
+                <div class="pet-gallery">
+                    <div class="pet-item birds">
+                        <div class="pet-thumbnail">
+                            <img src="/images/bird-1.jpg" alt="Bird 1">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Stinky</h3>
+                            <p>Age: 3 years</p>
+                            <p>Breed: Parrotlet</p>
+                        </div>
+                    </div>
+                    <div class="pet-item birds">
+                        <div class="pet-thumbnail">
+                            <img src="/images/bird-2.jpg" alt="Bird 2">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Coo Coo</h3>
+                            <p>Age: 1 year</p>
+                            <p>Breed: Cockatiel</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item birds">
+                        <div class="pet-thumbnail">
+                            <img src="/images/bird-3.webp" alt="Bird 3">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Feathers</h3>
+                            <p>Age: 2 year</p>
+                            <p>Breed: Hyacinth Macaws</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item birds">
+                        <div class="pet-thumbnail">
+                            <img src="/images/bird-4.jpg" alt="Bird 4">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Birdie</h3>
+                            <p>Age: 1 year</p>
+                            <p>Breed: Pionus Parrots</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="pet-type">Our Rabbits</h2>
+                <div class="pet-gallery">
+                    <div class="pet-item rabbits">
+                        <div class="pet-thumbnail">
+                            <img src="/images/rabbit-1.jpg" alt="Rabbit 1">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Bugs</h3>
+                            <p>Age: 1 year</p>
+                            <p>Breed: Lop</p>
+                        </div>
+                    </div>
+                    <div class="pet-item rabbits">
+                        <div class="pet-thumbnail">
+                            <img src="/images/rabbit-2.webp" alt="Rabbit 2">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Flopsy</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Dwarf</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item rabbits">
+                        <div class="pet-thumbnail">
+                            <img src="/images/rabbit-3.jpeg" alt="Rabbit 3">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Bun</h3>
+                            <p>Age: 4 years</p>
+                            <p>Breed: Netherland Dwarf</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-item rabbits">
+                        <div class="pet-thumbnail">
+                            <img src="/images/rabbit-4.jpg" alt="Rabbit 4">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Daisy</h3>
+                            <p>Age: 6 years</p>
+                            <p>Breed: Mini Lop</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-                <div class="pet-details">
-                <h4 class="pet-name">Wawa</h4>
-                <span class="pet-age">1 year old</span>
-              </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="pet-preview">
+    <footer>
+        <p>&copy; 2024 Petify. All rights reserved.</p>
+    </footer>
+</body>
 
-            <div class="pet-info">
-                <img src ="/images/cat-3.jpg" class ="pet-pic">
-            </div>
-                <div class="pet-details">
-                <h4 class="pet-name">tom</h4>
-                <span class="pet-age">10 year old</span>
-              </div>
-        </div>
-    </body>
 </html>
