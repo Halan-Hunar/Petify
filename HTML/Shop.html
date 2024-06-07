@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Petify.com - Shop</title>
+    <title>Petify.com - Cart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Halan Hunar, San Aram, Zheer Noori, Sahand Sarkawt">
@@ -17,10 +17,138 @@
 
     <!--CSS Stylesheets-->
     <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+
+   
   </head>
 
 
   <body>
-    
+    <!-- Header -->
+    <header>
+      <nav class="desktop-menu">
+          <div class="link-container">
+            <a href="index.html">Home</a>
+          </div>
+
+          <div class="link-container">
+            <a href="Adopt.html">Pets</a>
+          </div>
+
+          <div class="link-container">
+            <a href="#about">About</a>
+          </div>
+
+          <div class="link-container">
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="link-container">
+            <a href="#search-panel">Search</a>
+          </div>
+            
+          <div class="link-container">
+            <a href="/HTML/Shop.html">Cart</a>
+          </div>            
+      </nav>
+    </header>
+
+    <!-- Pet Adoption Form -->
+    <form class="adoption-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-7 adoption-table-container">
+                    <table class="adoption-table">
+                        <tr class="table-head">
+                            <th>Pet</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Breed</th>
+                            <th>Location</th>
+                            <th></th>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="pet-image">
+                                <img src="/images/dog-1.jpg" alt="Pet">
+                            </td>
+                            <td class="pet-name">Pet 1</td>
+                            <td class="pet-age">2 years</td>
+                            <td class="pet-breed">Labrador</td>
+                            <td class="pet-location">New York</td>
+                            <td class="pet-remove"><button class="remove-button">Remove</button></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="pet-image">
+                                <img src="/images/dog-2.jpg" alt="Pet">
+                            </td>
+                            <td class="pet-name">Pet 2</td>
+                            <td class="pet-age">3 years</td>
+                            <td class="pet-breed">Beagle</td>
+                            <td class="pet-location">Los Angeles</td>
+                            <td class="pet-remove"><button class="remove-button">Remove</button></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="pet-image">
+                                <img src="/images/cat-2.jpg" alt="Pet">
+                            </td>
+                            <td class="pet-name">Pet 2</td>
+                            <td class="pet-age">1 years</td>
+                            <td class="pet-breed">Megatron</td>
+                            <td class="pet-location">Said Sadiq</td>
+                            <td class="pet-remove"><button class="remove-button">Remove</button></td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                <div class="col-sm-10 col-lg-7 col-xl-5 adoption-details-container">
+                    <div class="adoption-details">
+                        <h4>Adoption Details</h4>
+                        <div class="adoption-subtotal">
+                            <span>Total Pets:</span>
+                            <span>3</span>
+                        </div>
+                        <div class="adoption-subtotal-types">
+                            <span>Total Dogs:</span>
+                            <span>2</span> <br>
+                            <span>Total Cats:</span>
+                            <span>1</span> <br>
+                            <span>Total Birds:</span>
+                            <span>0</span> <br>
+                        </div>
+                        <div class="adoption-location">
+                            <span>Location: Slemani,Kurdistan</span>
+                            <p>Available for pickup in selected cities</p>
+                        </div>
+                        <button type="button" class="btn-proceed-adoption">Proceed to Adoption</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 footer-category">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Dogs</a></li>
+                        <li><a href="#">Cats</a></li>
+                        <li><a href="#">Birds</a></li>
+                        <li><a href="#">Rabbits</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3 footer-help">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
   </body>
 </html>

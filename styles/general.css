@@ -8,3 +8,55 @@ body{
 h1,h2,h3,h4,h5,h6{
   font-family: marcellus;
 }
+
+.petify-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-container{
+  width: 100%;
+}
+
+/* Right-aligned link */
+.desktop-menu a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.link-container:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.link-container:active{
+  background-color: white;
+}
+
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: orange;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+
+/* Style the navigation bar links */
+.desktop-menu a {
+  color: black;
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.desktop-menu a.active {
+  background-color: #ffeb91;
+  color: white;
+}

@@ -1,32 +1,3 @@
-.petify-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.top-bar {
-  background-color: rgb(18, 18, 18);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed; /* Fix the element position */
-  top: 0; /* Stick it to the top of the page */
-  width: 100%;
-  margin-bottom: 10px;
-  padding-bottom: 0;
-  z-index: 999;
-}
-
-.logo-container {
-  width: 30px;
-}
-
-.logo-container img {
-  margin: 0;
-  padding: 0;
-  width: 50px;
-  height: 30px;
-  object-fit: cover;
-}
 
 /* Remove margin for all elements */
 .logo-container,
@@ -227,54 +198,6 @@
 .about-text{
   padding-left: 20px;
 }
-
-.desktop-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-  background-color: orange;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  overflow: hidden;
-  position: -webkit-sticky;
-  top: 30px;
-}
-
-/* Style the navigation bar links */
-.desktop-menu a {
-  color: black;
-  display: block;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-.link-container{
-  width: 100%;
-}
-
-/* Right-aligned link */
-.desktop-menu a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.link-container:hover {
-  background-color: orangered;
-  color: white;
-}
-
-.link-container:active{
-  background-color: white;
-}
-
-/* Active/current link */
-.desktop-menu a.active {
-  background-color: #ffeb91;
-  color: white;
-}
-
 
 /* Filter Section Styles */
 .filter-section {
