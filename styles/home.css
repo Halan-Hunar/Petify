@@ -442,3 +442,69 @@ size-filter {
 .filter-link:hover {
   background-color: #e0e0e0;
 }
+
+/*style for the contact us form*/
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.contact-us h2 {
+  font-family: 'Marcellus', serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.contact-form label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s, font-weight 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: orangered;
+  font-weight: 700;
+}
