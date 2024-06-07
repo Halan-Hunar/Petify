@@ -1,118 +1,119 @@
 /* Adoption Form Styles */
 .adoption-form {
-background-color: white;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container{
-  width: 1000px;
-  margin-top: 79px;
+.container {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.adoption-details {
-  width: 35%; /* Adjust width as needed */
+.adoption-table-container {
+  flex: 3;
+}
+
+.adoption-details-container {
+  flex: 1;
+  max-width: 300px;
+  align-self: center;
+  margin-right: auto; /* Move it a bit to the left */
 }
 
 .adoption-table {
-width: 70%;
-margin-bottom: 20px;
-background-color: white;
-border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-collapse: collapse;
 }
 
 .adoption-table th, .adoption-table td {
-padding: 10px;
-text-align: left;
-border-bottom: 1px solid orange;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid orange;
 }
 
 .adoption-table th {
-background-color: white;
-color: orange;
-}
-
-
-
-.adoption-details-container{
-  width: 300px;
+  background-color: white;
+  color: orange;
 }
 
 .adoption-details {
-background-color: orange;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-width: 100%;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .adoption-details h4 {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .adoption-details span {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .adoption-details p {
-margin-top: 5px;
+  margin-top: 5px;
 }
 
 .btn-proceed-adoption {
-background-color: rgb(28, 167, 28);
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s;
+  background-color: rgb(28, 167, 28);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn-proceed-adoption:hover {
-background-color: rgb(14, 83, 14);
+  background-color: rgb(14, 83, 14);
 }
 
 /* Footer Styles */
 footer {
-background-color: #343a40;
-color: white;
-padding: 40px 0;
-margin-top: 40px;
+  background-color: #343a40;
+  color: white;
+  padding: 40px 0;
+  margin-top: 40px;
 }
 
 .footer-category, .footer-help {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-category h4, .footer-help h4 {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-category ul, .footer-help ul {
-list-style: none;
-padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-category li, .footer-help li {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-category a, .footer-help a {
-color: white;
-transition: color 0.3s;
+  color: white;
+  transition: color 0.3s;
 }
 
 .footer-category a:hover, .footer-help a:hover {
-color: #ffdd57;
-text-decoration: underline;
+  color: #ffdd57;
+  text-decoration: underline;
 }
 
-.remove-button{
+.remove-button {
   background-color: red;
   color: white;
   border: none;
@@ -120,18 +121,17 @@ text-decoration: underline;
   height: 35px;
   font-size: 14px;
   text-align: center;
-  padding: px;
   border-radius: 5px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
 
-.remove-button:active{
+.remove-button:active {
   opacity: 0.5;
   color: red;
 }
 
-td img{
+td img {
   width: 120px;
   height: 120px;
   object-fit: cover;
