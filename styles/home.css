@@ -475,3 +475,16 @@ size-filter {
   66.66% { transform: translateX(-200%); opacity: 0;}
   100% { transform: translateX(-200%); opacity: 1;}
 }
+
+.filter-section {
+  display: none; /* Hide by default */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 0;
+}
+
+.filter-section.show {
+  display: block;
+  max-height: 1000px; /* Set to a value larger than the content height */
+}
+
