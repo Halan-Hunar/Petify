@@ -196,7 +196,7 @@
   background-color: white;
   border: 1px solid #dcdcdc;
   border-radius: 8px;
-  margin: 20px 0;
+  margin: 35px 0;
 }
 
 .filter-buttons {
@@ -476,15 +476,27 @@ size-filter {
   100% { transform: translateX(-200%); opacity: 1;}
 }
 
+/* Initial state */
 .filter-section {
   display: none; /* Hide by default */
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
   max-height: 0;
+  transition: max-height 0.5s ease-out;
 }
 
+/* Show state */
 .filter-section.show {
   display: block;
   max-height: 1000px; /* Set to a value larger than the content height */
+  animation: drop-down 0.7s ease-out;
 }
 
+/* Drop-down animation */
+@keyframes drop-down {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1000px; /* Set to a value larger than the content height */
+  }
+}
