@@ -11,40 +11,33 @@
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/adopt-style.css">
+    <script src="/javascript/adopt.js"> </script>
 </head>
 
 <body>
     <header class="petify-header">
-
         <!-- Desktop Menu -->
         <nav class="desktop-menu">
             <div class="link-container">
-              <a href="index.html">Home</a>
+                <a href="index.html">Home</a>
             </div>
-  
             <div class="link-container">
-              <a href="Adopt.html">Pets</a>
+                <a href="Adopt.html">Pets</a>
             </div>
-  
             <div class="link-container">
-              <a href="#about">About</a>
+                <a href="#about">About</a>
             </div>
-  
             <div class="link-container">
-              <a href="#contact">Contact</a>
+                <a href="#contact">Contact</a>
             </div>
-  
             <div class="link-container">
-              <a href="#search-panel">Search</a>
+                <a href="#search-panel">Search</a>
             </div>
-              
             <div class="link-container">
-              <a href="/HTML/Shop.html">Cart</a>
+                <a href="/HTML/Shop.html">Cart</a>
             </div>
-         
-              
         </nav>
-      </header>
+    </header>
 
     <main>
         <section class="adoption-section">
@@ -117,9 +110,8 @@
                 </div>
 
                 <h2 class="pet-type">Our Dogs:</h2>
-
                 <div class="pet-gallery">
-                    <div class="pet-item dogs">
+                    <div class="pet-item dogs" data-age="2" data-color="brown" data-size="medium">
                         <div class="pet-thumbnail">
                             <img src="/images/dog-1.jpg" alt="Dog 1">
                         </div>
@@ -129,8 +121,7 @@
                             <p>Breed: Golden Retriever</p>
                         </div>
                     </div>
-
-                    <div class="pet-item dogs">
+                    <div class="pet-item dogs" data-age="4" data-color="white" data-size="large">
                         <div class="pet-thumbnail">
                             <img src="/images/dog-2.jpg" alt="Dog 2">
                         </div>
@@ -140,175 +131,126 @@
                             <p>Breed: Bulldog</p>
                         </div>
                     </div>
-
-                    <div class="pet-item dogs">
+                    <div class="pet-item dogs" data-age="2" data-color="black" data-size="small">
                         <div class="pet-thumbnail">
                             <img src="/images/dog-3.jpg" alt="Dog 3">
                         </div>
                         <div class="pet-details">
-                            <h3>Ellie</h3>
+                            <h3>Roxy</h3>
                             <p>Age: 2 years</p>
-                            <p>Breed: Pug</p>
-                        </div>
-                    </div>
-
-                    <div class="pet-item dogs">
-                        <div class="pet-thumbnail">
-                            <img src="/images/dog-4.jpg" alt="Dog 4">
-                        </div>
-                        <div class="pet-details">
-                            <h3>Candy</h3>
-                            <p>Age: 6 years</p>
-                            <p>Breed: American Eskimo</p>
+                            <p>Breed: Beagle</p>
                         </div>
                     </div>
                 </div>
 
                 <h2 class="pet-type">Our Cats:</h2>
                 <div class="pet-gallery">
-                    <div class="pet-item cats">
+                    <div class="pet-item cats" data-age="1" data-color="white" data-size="small">
                         <div class="pet-thumbnail">
                             <img src="/images/cat-1.jpg" alt="Cat 1">
                         </div>
                         <div class="pet-details">
-                            <h3>Wawa</h3>
+                            <h3>Kitty</h3>
                             <p>Age: 1 year</p>
-                            <p>Breed: Siamese</p>
+                            <p>Breed: Persian</p>
                         </div>
                     </div>
-
-                    <div class="pet-item cats">
+                    <div class="pet-item cats" data-age="3" data-color="brown" data-size="medium">
                         <div class="pet-thumbnail">
                             <img src="/images/cat-2.jpg" alt="Cat 2">
                         </div>
                         <div class="pet-details">
-                            <h3>Wuwa</h3>
-                            <p>Age: 2 years</p>
-                            <p>Breed: Persian</p>
+                            <h3>Mittens</h3>
+                            <p>Age: 3 years</p>
+                            <p>Breed: Maine Coon</p>
                         </div>
                     </div>
-
-                    <div class="pet-item cats">
+                    <div class="pet-item cats" data-age="4" data-color="black" data-size="large">
                         <div class="pet-thumbnail">
                             <img src="/images/cat-3.jpg" alt="Cat 3">
                         </div>
                         <div class="pet-details">
-                            <h3>Tom</h3>
-                            <p>Age: 10 years</p>
-                            <p>Breed: Ocicat</p>
-                        </div>
-                    </div>
-
-                    <div class="pet-item cats">
-                        <div class="pet-thumbnail">
-                            <img src="/images/cat-4.jpg" alt="Cat 4">
-                        </div>
-                        <div class="pet-details">
-                            <h3>caddy</h3>
-                            <p>Age: 5 years</p>
-                            <p>Breed: Exotic ShortHair</p>
+                            <h3>Whiskers</h3>
+                            <p>Age: 4 years</p>
+                            <p>Breed: Sphynx</p>
                         </div>
                     </div>
                 </div>
 
                 <h2 class="pet-type">Our Birds:</h2>
                 <div class="pet-gallery">
-                    <div class="pet-item birds">
+                    <div class="pet-item birds" data-age="1" data-color="yellow" data-size="small">
                         <div class="pet-thumbnail">
                             <img src="/images/bird-1.jpg" alt="Bird 1">
                         </div>
                         <div class="pet-details">
-                            <h3>Stinky</h3>
-                            <p>Age: 3 years</p>
-                            <p>Breed: Parrotlet</p>
+                            <h3>Tweety</h3>
+                            <p>Age: 1 year</p>
+                            <p>Breed: Canary</p>
                         </div>
                     </div>
-                    <div class="pet-item birds">
+                    <div class="pet-item birds" data-age="2" data-color="green" data-size="small">
                         <div class="pet-thumbnail">
                             <img src="/images/bird-2.jpg" alt="Bird 2">
                         </div>
                         <div class="pet-details">
-                            <h3>Coo Coo</h3>
-                            <p>Age: 1 year</p>
-                            <p>Breed: Cockatiel</p>
+                            <h3>Kiwi</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Parrot</p>
                         </div>
                     </div>
-
-                    <div class="pet-item birds">
+                    <div class="pet-item birds" data-age="3" data-color="blue" data-size="small">
                         <div class="pet-thumbnail">
-                            <img src="/images/bird-3.webp" alt="Bird 3">
+                            <img src="/images/bird-3.jpg" alt="Bird 3">
                         </div>
                         <div class="pet-details">
-                            <h3>Feathers</h3>
-                            <p>Age: 2 year</p>
-                            <p>Breed: Hyacinth Macaws</p>
-                        </div>
-                    </div>
-
-                    <div class="pet-item birds">
-                        <div class="pet-thumbnail">
-                            <img src="/images/bird-4.jpg" alt="Bird 4">
-                        </div>
-                        <div class="pet-details">
-                            <h3>Birdie</h3>
-                            <p>Age: 1 year</p>
-                            <p>Breed: Pionus Parrots</p>
+                            <h3>Bluey</h3>
+                            <p>Age: 3 years</p>
+                            <p>Breed: Budgerigar</p>
                         </div>
                     </div>
                 </div>
 
-                <h2 class="pet-type">Our Rabbits</h2>
+                <h2 class="pet-type">Our Rabbits:</h2>
                 <div class="pet-gallery">
-                    <div class="pet-item rabbits">
+                    <div class="pet-item rabbits" data-age="2" data-color="white" data-size="small">
                         <div class="pet-thumbnail">
                             <img src="/images/rabbit-1.jpg" alt="Rabbit 1">
                         </div>
                         <div class="pet-details">
-                            <h3>Bugs</h3>
+                            <h3>Fluffy</h3>
+                            <p>Age: 2 years</p>
+                            <p>Breed: Angora</p>
+                        </div>
+                    </div>
+                    <div class="pet-item rabbits" data-age="1" data-color="brown" data-size="small">
+                        <div class="pet-thumbnail">
+                            <img src="/images/rabbit-2.jpg" alt="Rabbit 2">
+                        </div>
+                        <div class="pet-details">
+                            <h3>Hopper</h3>
                             <p>Age: 1 year</p>
                             <p>Breed: Lop</p>
                         </div>
                     </div>
-                    <div class="pet-item rabbits">
+                    <div class="pet-item rabbits" data-age="3" data-color="gray" data-size="medium">
                         <div class="pet-thumbnail">
-                            <img src="/images/rabbit-2.webp" alt="Rabbit 2">
+                            <img src="/images/rabbit-3.jpg" alt="Rabbit 3">
                         </div>
                         <div class="pet-details">
-                            <h3>Flopsy</h3>
-                            <p>Age: 2 years</p>
-                            <p>Breed: Dwarf</p>
-                        </div>
-                    </div>
-
-                    <div class="pet-item rabbits">
-                        <div class="pet-thumbnail">
-                            <img src="/images/rabbit-3.jpeg" alt="Rabbit 3">
-                        </div>
-                        <div class="pet-details">
-                            <h3>Bun</h3>
-                            <p>Age: 4 years</p>
-                            <p>Breed: Netherland Dwarf</p>
-                        </div>
-                    </div>
-
-                    <div class="pet-item rabbits">
-                        <div class="pet-thumbnail">
-                            <img src="/images/rabbit-4.jpg" alt="Rabbit 4">
-                        </div>
-                        <div class="pet-details">
-                            <h3>Daisy</h3>
-                            <p>Age: 6 years</p>
-                            <p>Breed: Mini Lop</p>
+                            <h3>Bunbun</h3>
+                            <p>Age: 3 years</p>
+                            <p>Breed: Rex</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Petify. All rights reserved.</p>
-    </footer>
+    
 </body>
 
 </html>
+
