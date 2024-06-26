@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateDisplay() {
         petSections.forEach(section => {
-            section.style.display = 'none'; // Hide all sections first
-
             const petItems = section.querySelectorAll('.pet-item');
             let hasVisibleItem = false;
 
@@ -24,16 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
                                   (filters.size === 'all-sizes' || size === filters.size);
 
                 if (isVisible) {
-                    item.style.display = 'block'; // Show matched items
+                    item.classList.remove('hidden'); // Show matched items
                     hasVisibleItem = true;
                 } else {
-                    item.style.display = 'none'; // Hide unmatched items
+                    item.classList.add('hidden'); // Hide unmatched items
                 }
             });
 
-           
             if (hasVisibleItem) {
-                section.style.display = 'block';
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
             }
         });
     }
@@ -42,14 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
             e.preventDefault();
 
-           
             const siblings = this.closest('ul').querySelectorAll('.filter-link');
             siblings.forEach(sibling => sibling.classList.remove('active'));
 
-           
             this.classList.add('active');
 
-            
             const filterType = this.closest('div').classList[0].split('-')[0]; // 'age', 'color', 'size', 'sortBy'
             filters[filterType] = this.textContent.toLowerCase().replace(/ /g, '-');
 
@@ -57,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-   
     updateDisplay();
 });
 
