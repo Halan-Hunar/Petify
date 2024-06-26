@@ -60,3 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
    
     updateDisplay();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const petItems = document.querySelectorAll('.pet-item');
+
+    petItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const name = item.dataset.name;
+            const imgSrc = item.dataset.img;
+            const age = item.dataset.age;
+            const breed = item.dataset.breed;
+
+            const petDetails = {
+                name: name,
+                imgSrc: imgSrc,
+                age: age,
+                breed: breed
+            };
+
+            localStorage.setItem('selectedPet', JSON.stringify(petDetails));
+            window.location.href = 'pet-details.html';
+        });
+    });
+});
