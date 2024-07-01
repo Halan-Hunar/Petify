@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
     const filterLinks = document.querySelectorAll('.filter-link');
     const petSections = document.querySelectorAll('.pet-type, .pet-gallery');
@@ -62,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     updateDisplay();
 });
+=======
+// adopt.js
+>>>>>>> c73dd7cb4136bfd0107fd0a355c52e6daf6992cc
 
 function redirectToDetails(petItem) {
     const name = petItem.getAttribute('data-name');
@@ -74,9 +78,28 @@ function redirectToDetails(petItem) {
     const about = petItem.getAttribute('data-about');
     const imageUrl = petItem.querySelector('img').src;
 
+<<<<<<< HEAD
     const params = new URLSearchParams({
         name, age, breed, color, size, gender, health, about, imageUrl
     }).toString();
 
     window.location.href = `pet-details.html?${params}`;
 }
+=======
+    petItems.forEach(petItem => {
+        petItem.addEventListener('click', event => {
+            if (event.target.classList.contains('pet-link')) {
+                const name = petItem.dataset.name;
+                const age = petItem.dataset.age;
+                const breed = petItem.dataset.breed;
+                const color = petItem.dataset.color;
+                const size = petItem.dataset.size;
+                const image = petItem.dataset.image;
+
+                const queryString = `?name=${encodeURIComponent(name)}&age=${encodeURIComponent(age)}&breed=${encodeURIComponent(breed)}&color=${encodeURIComponent(color)}&size=${encodeURIComponent(size)}&image=${encodeURIComponent(image)}`;
+                event.target.href = `pet-details.html${queryString}`;
+            }
+        });
+    });
+});
+>>>>>>> c73dd7cb4136bfd0107fd0a355c52e6daf6992cc

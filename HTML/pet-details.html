@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/adopt-style.css">
     <link rel="stylesheet" href="/styles/pet-details.css">
 </head>
+
 <body>
     <header class="petify-header">
         <!-- Desktop Menu -->
@@ -40,6 +43,7 @@
         <section class="pet-details-section">
             <div class="container">
                 <div class="pet-details-header">
+<<<<<<< HEAD
                     <h2 class="section-title">Pet Name</h2>
                 </div>
                 <div class="pet-details-content">
@@ -48,6 +52,22 @@
                     </div>
                     <div class="pet-info">
                         <!-- Content populated by JavaScript -->
+=======
+                    <h2 class="section-title" id="pet-name">Pet Name</h2>
+                </div>
+                <div class="pet-details-content">
+                    <div class="pet-image">
+                        <img src="" alt="Pet Image" id="pet-image">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Pet Details</h3>
+                        <p><strong>Age:</strong> <span id="pet-age"></span></p>
+                        <p><strong>Breed:</strong> <span id="pet-breed"></span></p>
+                        <p><strong>Color:</strong> <span id="pet-color"></span></p>
+                        <p><strong>Size:</strong> <span id="pet-size"></span></p>
+                        <p><strong>About:</strong> <span id="pet-about">This pet is looking for a loving home.</span></p>
+                        <button class="adopt-button">Adopt <span id="pet-name-btn">Pet</span></button>
+>>>>>>> c73dd7cb4136bfd0107fd0a355c52e6daf6992cc
                     </div>
                 </div>
             </div>
@@ -58,6 +78,27 @@
         <p>&copy; 2024 Petify. All rights reserved.</p>
     </footer>
 
-    <script src="/javascript/pet-details.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const age = params.get('age');
+            const breed = params.get('breed');
+            const color = params.get('color');
+            const size = params.get('size');
+            const image = params.get('image');
+
+            if (name && age && breed && color && size && image) {
+                document.getElementById('pet-name').textContent = name;
+                document.getElementById('pet-age').textContent = age;
+                document.getElementById('pet-breed').textContent = breed;
+                document.getElementById('pet-color').textContent = color;
+                document.getElementById('pet-size').textContent = size;
+                document.getElementById('pet-image').src = image;
+                document.getElementById('pet-name-btn').textContent = name;
+            }
+        });
+    </script>
 </body>
+
 </html>
