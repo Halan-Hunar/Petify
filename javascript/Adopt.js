@@ -37,44 +37,46 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    filterLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+    document.addEventListener('DOMContentLoaded', function () {
+        const petItems = document.querySelectorAll('.pet-item');
+        
+        petItems.forEach(petItem => {
+            petItem.addEventListener('click', function () {
+                const name = petItem.getAttribute('data-name');
+                const age = petItem.getAttribute('data-age');
+                const breed = petItem.getAttribute('data-breed');
+                const color = petItem.getAttribute('data-color');
+                const size = petItem.getAttribute('data-size');
+                const gender = petItem.getAttribute('data-gender');
+                const health = petItem.getAttribute('data-health');
+                const about = petItem.getAttribute('data-about');
+                const imageUrl = petItem.querySelector('img').src;
 
-            const siblings = this.closest('ul').querySelectorAll('.filter-link');
-            siblings.forEach(sibling => sibling.classList.remove('active'));
+                const params = new URLSearchParams({
+                    name, age, breed, color, size, gender, health, about, imageUrl
+                }).toString();
 
-            this.classList.add('active');
-
-            const filterType = this.closest('div').classList[0].split('-')[0]; // 'age', 'color', 'size', 'sortBy'
-            filters[filterType] = this.textContent.toLowerCase().replace(/ /g, '-');
-
-            updateDisplay();
+                window.location.href = `pet-details.html?${params}`;
+            });
         });
     });
-
     updateDisplay();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const petItems = document.querySelectorAll('.pet-item');
+function redirectToDetails(petItem) {
+    const name = petItem.getAttribute('data-name');
+    const age = petItem.getAttribute('data-age');
+    const breed = petItem.getAttribute('data-breed');
+    const color = petItem.getAttribute('data-color');
+    const size = petItem.getAttribute('data-size');
+    const gender = petItem.getAttribute('data-gender');
+    const health = petItem.getAttribute('data-health');
+    const about = petItem.getAttribute('data-about');
+    const imageUrl = petItem.querySelector('img').src;
 
-    petItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const name = item.dataset.name;
-            const imgSrc = item.dataset.img;
-            const age = item.dataset.age;
-            const breed = item.dataset.breed;
+    const params = new URLSearchParams({
+        name, age, breed, color, size, gender, health, about, imageUrl
+    }).toString();
 
-            const petDetails = {
-                name: name,
-                imgSrc: imgSrc,
-                age: age,
-                breed: breed
-            };
-
-            localStorage.setItem('selectedPet', JSON.stringify(petDetails));
-            window.location.href = 'pet-details.html';
-        });
-    });
-});
+    window.location.href = `pet-details.html?${params}`;
+}
