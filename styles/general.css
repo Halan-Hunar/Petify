@@ -60,3 +60,20 @@ h1,h2,h3,h4,h5,h6{
   background-color: #ffeb91;
   color: white;
 }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure this matches the height of the container */
+  width: 55px;
+}
+
+.logo img {
+  width: 47px;
+  height: 47px;
+}
+
+.logo:hover {
+  background-color: orange;
+}
