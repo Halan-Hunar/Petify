@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" href="/styles/adopt-style.css">
     <link rel="stylesheet" href="/styles/pet-details.css">
 </head>
-
 <body>
     <header class="petify-header">
         <!-- Desktop Menu -->
@@ -85,9 +83,32 @@
                 document.getElementById('pet-size').textContent = size;
                 document.getElementById('pet-image').src = image;
                 document.getElementById('pet-name-btn').textContent = name;
+
+                // Set up adopt button click event
+                document.querySelector('.adopt-button').addEventListener('click', () => {
+                    const pet = {
+                        name,
+                        age,
+                        breed,
+                        color,
+                        size,
+                        image
+                    };
+
+                    // Retrieve the current pets from localStorage
+                    const pets = JSON.parse(localStorage.getItem('pets')) || [];
+
+                    // Add the new pet to the list
+                    pets.push(pet);
+
+                    // Store the updated pets list in localStorage
+                    localStorage.setItem('pets', JSON.stringify(pets));
+
+                    // Redirect to shop.html
+                    window.location.href = '/HTML/Shop.html';
+                });
             }
         });
     </script>
 </body>
-
 </html>
