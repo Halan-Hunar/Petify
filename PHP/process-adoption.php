@@ -32,7 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $stmt->close();
     
-    echo "Adoption process completed successfully.";
+    // Redirect to index.html after successful submission
+    header("Location: index.html");
+    exit();
 }
 
 $conn->close();

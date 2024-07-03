@@ -23,7 +23,9 @@ $stmt->bind_param("ss", $email, $message);
 
 // Execute the statement
 if ($stmt->execute()) {
-    echo "Feedback submitted successfully!";
+    // Redirect to index.html after successful submission
+    header("Location: index.html");
+    exit();
 } else {
     echo "Error: " . $stmt->error;
 }
