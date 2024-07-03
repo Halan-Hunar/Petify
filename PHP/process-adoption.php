@@ -24,10 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert adopter information into adopters table
     $sql = "INSERT INTO adopters (adopter_name, address) VALUES ('$name', '$address')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Adoption details recorded successfully";
+    if ($stmt->execute()) {
+        // Redirect to index.html after successful submission
+        header("Location: index.html");
+        exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 }
 
