@@ -67,11 +67,64 @@
                         <span>Location: Slemani, Kurdistan</span>
                         <p>Available for pickup in selected cities</p>
                     </div>
-                    <button type="button" class="btn-proceed-adoption">Proceed to Adoption</button>
+                    <button type="button" class="btn-proceed-adoption" onclick="proceedToAdoption()">Proceed to Adoption</button>
                 </div>
             </div>
         </div>
     </form>
+
+    <!-- Search and Sort Sections -->
+    <section id="search">
+        <h2>Search for Pets</h2>
+        <form action="../PHP/search-pets.php" method="get">
+            <input type="text" name="query" placeholder="Search for pets">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="sort">
+        <h2>Sort Pets</h2>
+        <form action="../PHP/sort-pets.php" method="get">
+            <select name="sort_by">
+                <option value="pet_name">Name</option>
+                <option value="aid">Adopter ID</option>
+            </select>
+            <button type="submit">Sort</button>
+        </form>
+    </section>
+
+    <section id="available-pets">
+        <h2>Available Pets</h2>
+        <?php
+        // Fetch all pets from the database
+        $servername = "your_server";
+        $username = "your_username";
+        $password = "your_password";
+        $dbname = "your_database";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM pet";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='pet'>";
+                echo "<p>Name: " . $row['pet_name'] . "</p>";
+                echo "<p>Adopter ID: " . $row['aid'] . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No pets available.</p>";
+        }
+
+        $conn->close();
+        ?>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -86,7 +139,7 @@
                         <li><a href="#">Fish</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 col-lg=3 footer-help">
+                <div class="col-sm-6 col-lg-3 footer-help">
                     <h4>Help</h4>
                     <ul>
                         <li><a href="#">Shipping & Returns</a></li>
@@ -100,6 +153,12 @@
     </footer>
 
     <script>
+        function proceedToAdoption() {
+            const pets = JSON.parse(localStorage.getItem('pets')) || [];
+            const petIds = pets.map(pet => pet.id).join(',');
+            window.location.href = `adopt-form.html?pet_ids=${petIds}`;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const pets = JSON.parse(localStorage.getItem('pets')) || [];
             const table = document.getElementById('pet-cart-table');
