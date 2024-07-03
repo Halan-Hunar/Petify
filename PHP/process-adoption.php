@@ -1,8 +1,11 @@
 <?php
+// process-adoption.php
+
+// Database configuration
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Petify";
+$username = "root";  // Replace with your database username
+$password = "";  // Replace with your database password
+$dbname = "Petify";  // Replace with your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,30 +15,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $pet_ids = explode(',', $_POST['pet_ids']);
-    
-    // Insert adopter details
-    $stmt = $conn->prepare("INSERT INTO adopter (name, address) VALUES (?, ?)");
-    $stmt->bind_param("ss", $name, $address);
-    $stmt->execute();
-    $adopter_id = $stmt->insert_id;
-    $stmt->close();
-    
-    // Update pet details
-    $stmt = $conn->prepare("UPDATE pet SET aid = ? WHERE pid = ?");
-    foreach ($pet_ids as $pid) {
-        $stmt->bind_param("ii", $adopter_id, $pid);
-        $stmt->execute();
+    $name = $conn->real_escape_string($_POST['name']);
+    $address = $conn->real_escape_string($_POST['address']);
+    $pet_ids = $conn->real_escape_string($_POST['pet_ids']);  // Note: This is not used in the current script
+
+    // Insert adopter information into adopters table
+    $sql = "INSERT INTO adopters (adopter_name, address) VALUES ('$name', '$address')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Adoption details recorded successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    $stmt->close();
-    
-    // Redirect to index.html after successful submission
-    header("Location: index.html");
-    exit();
 }
 
+// Close connection
 $conn->close();
 ?>
