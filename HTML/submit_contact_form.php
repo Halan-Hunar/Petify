@@ -1,24 +1,34 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+// Database connection parameters
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Petify";
 
-    $contact = [
-        'email' => $email,
-        'message' => $message,
-        'date' => date("Y-m-d H:i:s")
-    ];
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    $contacts = [];
-    if (file_exists('contacts.json')) {
-        $contacts = json_decode(file_get_contents('contacts.json'), true);
-    }
-
-    $contacts[] = $contact;
-
-    file_put_contents('contacts.json', json_encode($contacts, JSON_PRETTY_PRINT));
-
-    header("Location: index.html?success=1");
-    exit();
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Get the form data
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+// Prepare and bind
+$stmt = $conn->prepare("INSERT INTO feedback (email, message) VALUES (?, ?)");
+$stmt->bind_param("ss", $email, $message);
+
+// Execute the statement
+if ($stmt->execute()) {
+    echo "Feedback submitted successfully!";
+} else {
+    echo "Error: " . $stmt->error;
+}
+
+// Close the statement and connection
+$stmt->close();
+$conn->close();
 ?>
