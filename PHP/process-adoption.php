@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost";
 $username = "root"; 
 $password = "";  
@@ -20,16 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $conn->real_escape_string($_POST['address']);
     $pet_ids = $conn->real_escape_string($_POST['pet_ids']);  
 
-    // Insert adopter information into adopters table
-    $sql = "INSERT INTO adopters (adopter_name, address) VALUES ('$name', '$address')";
+    // Prepare and bind
+    $stmt = $conn->prepare("INSERT INTO adopters (adopter_name, address) VALUES (?, ?)");
+    $stmt->bind_param("ss", $name, $address);
 
     if ($stmt->execute()) {
-       
-        header("Location: index.html");
+        // Redirect to the HTML file located in the parent directory's HTML folder
+        header("Location: http://localhost/HTML/index.html");
         exit();
     } else {
         echo "Error: " . $stmt->error;
     }
+
+    // Close statement
+    $stmt->close();
 }
 
 // Close connection
