@@ -1,5 +1,5 @@
 <?php
-// Database connection parameters
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -21,9 +21,9 @@ $message = $_POST['message'];
 $stmt = $conn->prepare("INSERT INTO feedback (email, message) VALUES (?, ?)");
 $stmt->bind_param("ss", $email, $message);
 
-// Execute the statement
+
 if ($stmt->execute()) {
-    // Redirect to index.html after successful submission
+    
     header("Location: index.html");
     exit();
 } else {
